@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime-Bank</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container" id="transition-area">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="deposit status">
+            <h5>Deposit Balance</h5>
+            <h2>$ <span id="currantDeposit">00</span></h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="withdraw status">
+            <h5>Withdraw Balance</h5>
+            <h2>$ <span id="currantwithdraw">00</span></h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="balance status">
+            <h5>Main Balance</h5>
+            <h2>$ <span id="mainBalance">00</span></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-md-5">
+          <div class="login-area">
+            <h5>Deposit</h5>
+            <input
+              type="text"
+              class="form-control"
+              id="currantDepositValue"
+              placeholder="$ amount you want to deposit..."
+            />
+            <br />
+            <button class="btn btn-primary" id="depositBtn">Deposit</button>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="login-area">
+            <h5>Withdraw</h5>
+            <input
+              type="text"
+              class="form-control"
+              id="currantwithdrawValue"
+              placeholder="$ amount you want to withdraw..."
+            />
+            <br />
+            <button class="btn btn-primary" id="withdrawBtn">Withdraw</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/main.js"></script>
+  </body>
+</html>
