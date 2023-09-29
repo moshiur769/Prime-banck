@@ -6,7 +6,7 @@ loginBtn.addEventListener('click', function(){
     const password = loginpassword.value;
 
     if(Email==="primebank@gmail.com"&& password=== "1234"){
-        window.location.href="dashboard.html";
+        window.location.href="/dashboard.html";
     }
     else{
         alert('Your Email or Password Not Match')
