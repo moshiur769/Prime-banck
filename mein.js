@@ -1,10 +1,39 @@
-const depozit = document.getElementById("DepositBtn");
+const depozit = document.getElementById("depositBtn");
 
 depozit.addEventListener('click', function(){
-    // Deposit blance section
+    // depozit blance section
     const InputDepozit = parseFloat(document.getElementById('currantDepositValue').value);
     const allDipozit = parseFloat(document.getElementById('currantDeposit').innerText);
+     
+    // total blance section
+    const totalBlnce = parseFloat(document.getElementById('mainBalance').innerText);
 
+
+    
+    
+    document.getElementById('currantDepositValue').value=' ';
+    if(InputDepozit >= 5){
+        const totalDepozit = allDipozit+InputDepozit;
+        document.getElementById('currantDeposit').innerHTML=totalDepozit;
+        alert('depozit blannce is succes');
+        document.getElementById('mainBalance').innerText=totalBlnce+InputDepozit;
+
+        if(totalDepozit===100 ){
+            alert('your blance 100');
+        }
+        else if(totalDepozit=== 500){
+            alert('your blance is 500')
+        }
+        else if(totalDepozit=== 1000){
+            alert('your blance is 1000')
+        }
+     }
+
+    else{
+        alert('minmum blance is 5 taka ')
+    }
+
+})
 
 
 // withdro section part
@@ -20,16 +49,16 @@ withdro.addEventListener('click', function(){
         document.getElementById('currantwithdraw').innerText=withdro;
         document.getElementById('mainBalance').innerText= totalBlance-withdroInput;
 
-        alert('Your Withdrow is Succes')
+        alert('your withdrow is succes')
         
 
 
     }
     else if(withdroInput<5){
-        alert('Your Minimum Withdro Balnace 5')
+        alert('you minimum withdro blnace 5')
     }
     else if (totalBlance <= withdroInput){
-        alert('Your Balance Too Low');
+        alert('your balance too low');
     }
 
     
@@ -40,38 +69,5 @@ withdro.addEventListener('click', function(){
 
 
 
-} )    
-     
-    // main blance section
-    const totalBlnce = parseFloat(document.getElementById('mainBalance').innerText);
-
-
-    
-    
-    document.getElementById('currantDepositValue').value=' ';
-    if(InputDepozit >= 5){
-        const totalDepozit = allDipozit+InputDepozit;
-        document.getElementById('currantDeposit').innerHTML=totalDepozit;
-        alert('Deposit Blannce is Succes');
-        document.getElementById('mainBalance').innerText=totalBlnce+InputDepozit;
-
-        if(totalDepozit===100 ){
-            alert('Your Blance 100');
-        }
-        else if(totalDepozit=== 500){
-            alert('Your Blance is 500')
-        }
-        else if(totalDepozit=== 1000){
-            alert('Your Blance is 1,000')
-        }
-     }
-
-    else{
-        alert('Minmum Balance is 5 taka ')
-    }
-
-})
-
-
-
+} )
 
